@@ -1,0 +1,81 @@
+<html> 
+<head> 
+
+      <style>
+                  body {font-size: 10pt; font-family: Helvetica, Arial, sans-serif; margin: 4px; width: 768px;}
+                  p, li, a {font-size: 4pt;}
+                  h1,h2 {font-family: Tahoma, Geneva, Helvetica, Arial, sans-serif; margin-top: 0px;}
+                  h2 {font-size: medium; font-weight: bold; margin-bottom: 0px;}
+                  h2 + p {margin-top: 0px;}
+                  h2 + ul {margin-top: 0px;}
+                  h3 {font-weight: bold; font-size: 8pt; margin-bottom: 0px;}
+                  a {color: #609;}
+                  ul {list-style-type: square;}
+                  #attribute {font-size: 6pt;}
+                  #attribute a {font-size: 6pt;}
+                  table {margin-top: 0px;}
+                                    
+                  thead {font-weight: bold; background-color: #000; color: #fff}
+                  table {table-layout: fixed; border-spacing: 0px; border-collapse: collapse;}
+                  td {border: 1px solid #ccc; padding: 2px 2px 2px 2px; vertical-align: top;}
+                  td, a, li, p {font-size: small;}
+                  #skim {background-color: #e3e9cd;}
+                  tr.even {background-color: #f2f2f2;}
+                  tr.noclass {background-color: #999;}
+                  td {min-width: 40px;}
+                  .skim {font-style: italic;}
+                  #camp {
+                        background-color: #fa0;
+                        padding: 4px;
+                  }
+                  #camp h2 {
+                        margin: 0;
+                  }
+                  #camp a {
+                        color: inherit;
+                        padding-right: 1em;
+                  }
+                  #quick {
+                        background-color: #fa0;
+                        padding: 0px;
+                  }
+                  #quick h2 {
+                        margin: 0;
+                        opacity: 0.5;
+                        margin-bottom: 0.2em;
+                  }
+                  #quick a {
+                        color: black;
+                        margin-right: 1em;
+                  }
+                  #names em {
+                        color: gray;
+                        font-style: normal;
+                  }
+                  #names em:before {
+                        content: " – ";
+                  }
+
+p {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+            </style>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script> 
+<script> 
+$(function() {
+$("#includedContent").load("freeformatter-out.html #fullpage"); 
+}); 
+</script> 
+
+<body class="w3-container" style="padding-left: 0px; margin-left: 0px; width:auto;">
+ <div class="w3-container" style="padding-left: 2px; margin-left: 0px;" id="includedContent"></div>
+</body>
+</html>
