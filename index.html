@@ -1,14 +1,10 @@
 <html lang="en" class="_51l0" style="height: 100%; overflow-x: hidden; overflow-y: auto;">
    <head>
       <script type="text/javascript">
-  <!--
-  if (screen.width <= 800) {
-    window.location = "./printablepage.html";
-  }
-  //-->
-</script>
+      </script>
       <meta charset="utf-8">
       <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer">
+      <meta name="viewport" content="width=device-width">
       <link rel="icon" type="image/png" href="cs1300favicon.png" />
       <style></style>
       <title id="pageTitle">CS 1300 / 0130 User Interfaces and User Experience</title>
@@ -118,9 +114,6 @@
       <script style="display: none;">var tvt = tvt || {}; tvt.captureVariables = function (a){for(var b=new Date,c={},d=Object.keys(a||{}),e=0,
          f;f=d[e];e++)if(a.hasOwnProperty(f)&&"undefined"!=typeof a[f])try{var g=[];c[f]=JSON.stringify(a[f],function(a,b){try{if("function"!==typeof b){if("object"===typeof b&&null!==b){if(b instanceof HTMLElement||b instanceof Node||-1!=g.indexOf(b))return;g.push(b)}return b}}catch(L){}})}catch(l){}a=document.createEvent("CustomEvent");a.initCustomEvent("TvtRetrievedVariablesEvent",!0,!0,{variables:c,date:b});window.dispatchEvent(a)};window.setTimeout(function() {tvt.captureVariables({'dataLayer': window['dataLayer']})}, 2000);
       </script>
-      <style></style>
-      <style></style>
-      <style></style>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
       <script>
       $(function() {
@@ -340,606 +333,659 @@
    </head>
    <body unselectable="off" class="chrome webkit mac x1 Locale_en_US _z4_ __6g"  style="overflow: hidden" dir="ltr">
       <style type="text/css">
-    .noselect {
-  -webkit-touch-callout: text; /* iOS Safari */
-    -webkit-user-select: text; /* Safari */
-     -khtml-user-select: text; /* Konqueror HTML */
-       -moz-user-select: text; /* Firefox */
-        -ms-user-select: text; /* Internet Explorer/Edge */
-            user-select: text; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-</style>
-<script>
-function animate(elem, style, unit, from, to, time, prop) {
-    if (!elem) {
-        return;
-    }
-    var start = new Date().getTime(),
-        timer = setInterval(function () {
-            var step = Math.min(1, (new Date().getTime() - start) / time);
-            if (prop) {
-                elem[style] = (from + step * (to - from))+unit;
-            } else {
-                elem.style[style] = (from + step * (to - from))+unit;
+          .noselect {
+        -webkit-touch-callout: text; /* iOS Safari */
+          -webkit-user-select: text; /* Safari */
+           -khtml-user-select: text; /* Konqueror HTML */
+             -moz-user-select: text; /* Firefox */
+              -ms-user-select: text; /* Internet Explorer/Edge */
+                  user-select: text; /* Non-prefixed version, currently
+                                        supported by Chrome and Opera */
+         }
+      </style>
+      <!-- RESPONSIVITY --> 
+      <style> 
+         @media screen and (max-width: 1024px) {
+             #left_side_bar {
+                 visibility: hidden; 
+                 width: 0; 
+             }
+         }
+         
+         @media screen and (max-width: 900px) { 
+            #right_side_bar {
+               display: none; 
             }
-            if (step === 1) {
-                clearInterval(timer);
+            #main { 
+               min-width: 0; 
             }
-        }, 25);
-    if (prop) {
-          elem[style] = from+unit;
-    } else {
-          elem.style[style] = from+unit;
-    }
-}
-</script>
+            ._4sp8 {
+               min-width: 0; 
+            }
+            table {
+               overflow-x: scroll !important;
+               display: block !important;
+               white-space: nowrap;
+            }
+            td { 
+               font-size: 0.7em !important; 
+            }
+            td a {
+               font-size: 1em !important; 
+            }
+            #top_icons {
+               visibility: hidden; 
+            }
+         }
+         
+         @media screen and (max-width: 480px) { 
+            #course_title {
+               display: none; 
+            }
+            #course_title_mobile { 
+               display: inline !important;
+               font-weight: 200; 
+            }
+         }
+      </style>
+      <script>
+      function animate(elem, style, unit, from, to, time, prop) {
+          if (!elem) {
+              return;
+          }
+          var start = new Date().getTime(),
+              timer = setInterval(function () {
+                  var step = Math.min(1, (new Date().getTime() - start) / time);
+                  if (prop) {
+                      elem[style] = (from + step * (to - from))+unit;
+                  } else {
+                      elem.style[style] = (from + step * (to - from))+unit;
+                  }
+                  if (step === 1) {
+                      clearInterval(timer);
+                  }
+              }, 25);
+          if (prop) {
+                elem[style] = from+unit;
+          } else {
+                elem.style[style] = from+unit;
+          }
+      }
+      </script>
       <div class="_2sdm" id="u_0_0">
          <div class="_li">
             <div class="_4sp8">
-               <div style="width: 300px;">
-                  <div  style="width: 300px;">
-                     <div class="_2xhi">
-                        <div class="_p0g">
-                           <div class="message"></div>
-                        </div>
-                        <div class="_4wzq _4-je" aria-hidden="true">
-                           <a class="_5f0v _4wzs" tabindex="-1" href="#">
-                              <img class="_4wzt img" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/j1iF22EN0w3.png" height="16" width="16">
-                              <div class="_1bqr">New Messages</div>
-                           </a>
-                        </div>
-                        <style>
-                        div#pop-up1{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up2{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up3{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up4{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up5{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up6{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up7{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up8{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up9{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up10{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up11{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up12{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up13{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up14{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up15{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up16{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up17{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up18{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                        }
-                        div#pop-up19{
-                          display: none;
-                          position: absolute;
-                          width: 150px;
-                          z-index:10;
-                          float:right;
-                        }
-                        </style>
-                        <script>
-                                                function filterTAList() {
-                                                    // Declare variables
-                                                    var input, filter, ul, li, a, i;
-                                                    input = document.getElementById('myInput');
-                                                    filter = input.value.toUpperCase();
-                                                    ul = document.getElementById("myUL");
-                                                    li = ul.getElementsByTagName('li');
-                                                    // Loop through all list items, and hide those who don't match the search query
-                                                    for (i = 0; i < li.length; i++) {
-                                                        a = li[i].getElementsByTagName("a")[0];
-                                                        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                                                            li[i].style.display = "";
-                                                        } else {
-                                                            li[i].style.display = "none";
-                                                        }
-                                                    }
-                                                }
-                                                function clearSearch() {
-                                                  input = document.getElementById('myInput');
-                                                  input.value = "";
-                                                  filterTAList();
-                                                }
-                                                </script>
-                        <div class="_4u-c _9hq" style="width: 300px;">
-                           <div class="_5f0v uiScrollableArea fade contentAfter" style="height: 100%;">
-                              <div class="uiScrollableAreaWrap scrollable" id="js_8">
-                                 <div class="uiScrollableAreaBody">
-                                    <div class="uiScrollableAreaContent">
-                                       <div class="_3rh8"><span class="_5iwm _150g _58ah"><label class="_58ak"><input type="text" autocomplete="off" id="myInput" onkeyup="filterTAList()" class="_58al" placeholder="Search Your TAs!" spellcheck="false" value=""></label></span><i class="hidden_elem _2xme img sp_Efoz-_DuoJt sx_cd923a" alt="" onclick="clearSearch()"></i><span class="_58-3" aria-hidden="true">Search Your TAs!</span></div>
-                                       <div class="" role="navigation" aria-label="Conversations">
-                                          <div>
-                                             <ul id="myUL" aria-label="Conversation List" role="grid" >
-                                                <li aria-relevant="additions text" class="_5l-3 _1ht1 _1ht2" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:637275066" role="gridcell" tabindex="-1" >
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="0" id="trigger1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="heartgirl.png" width="50" height="50" alt="" class="img">
+               <div id="left_side_bar">
+                  <div style="width: 300px;">
+                     <div  style="width: 300px;">
+                        <div class="_2xhi">
+                           <div class="_p0g">
+                              <div class="message"></div>
+                           </div>
+                           <div class="_4wzq _4-je" aria-hidden="true">
+                              <a class="_5f0v _4wzs" tabindex="-1" href="#">
+                                 <img class="_4wzt img" alt="" src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/j1iF22EN0w3.png" height="16" width="16">
+                                 <div class="_1bqr">New Messages</div>
+                              </a>
+                           </div>
+                           <style>
+                           div#pop-up1{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up2{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up3{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up4{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up5{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up6{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up7{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up8{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up9{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up10{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up11{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up12{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up13{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up14{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up15{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up16{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up17{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up18{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                           }
+                           div#pop-up19{
+                             display: none;
+                             position: absolute;
+                             width: 150px;
+                             z-index:10;
+                             float:right;
+                           }
+                           </style>
+                           <script>
+                                                   function filterTAList() {
+                                                       // Declare variables
+                                                       var input, filter, ul, li, a, i;
+                                                       input = document.getElementById('myInput');
+                                                       filter = input.value.toUpperCase();
+                                                       ul = document.getElementById("myUL");
+                                                       li = ul.getElementsByTagName('li');
+                                                       // Loop through all list items, and hide those who don't match the search query
+                                                       for (i = 0; i < li.length; i++) {
+                                                           a = li[i].getElementsByTagName("a")[0];
+                                                           if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                                               li[i].style.display = "";
+                                                           } else {
+                                                               li[i].style.display = "none";
+                                                           }
+                                                       }
+                                                   }
+                                                   function clearSearch() {
+                                                     input = document.getElementById('myInput');
+                                                     input.value = "";
+                                                     filterTAList();
+                                                   }
+                                                   </script>
+
+                           <div class="_4u-c _9hq" style="width: 300px;">
+                              <div class="_5f0v uiScrollableArea fade contentAfter" style="height: 100%;">
+                                 <div class="uiScrollableAreaWrap scrollable" id="js_8">
+                                    <div class="uiScrollableAreaBody">
+                                       <div class="uiScrollableAreaContent">
+                                          <div class="_3rh8"><span class="_5iwm _150g _58ah"><label class="_58ak"><input type="text" autocomplete="off" id="myInput" onkeyup="filterTAList()" class="_58al" placeholder="Search Your TAs!" spellcheck="false" value=""></label></span><i class="hidden_elem _2xme img sp_Efoz-_DuoJt sx_cd923a" alt="" onclick="clearSearch()"></i><span class="_58-3" aria-hidden="true">Search Your TAs!</span></div>
+                                          <div class="" role="navigation" aria-label="Conversations">
+                                             <div>
+                                                <ul id="myUL" aria-label="Conversation List" role="grid" >
+                                                   <li aria-relevant="additions text" class="_5l-3 _1ht1 _1ht2" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:637275066" role="gridcell" tabindex="-1" >
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="0" id="trigger1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="heartgirl.png" width="50" height="50" alt="" class="img">
+                                                                     </div>
                                                                   </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Jina Yoon</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="Monday" data-utime="1503957443.78">Mon</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Jina Yoon</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="Monday" data-utime="1503957443.78">Mon</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">jina@brown.edu <span></span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">jina@brown.edu <span></span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:512215359" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger2" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://ih1.redbubble.net/image.204413541.9418/flat,800x800,075,t.jpg" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:512215359" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger2" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://ih1.redbubble.net/image.204413541.9418/flat,800x800,075,t.jpg" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Lily George</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="Friday" data-utime="1503703461.495">Fri</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Lily George</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="Friday" data-utime="1503703461.495">Fri</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span class="_j0r"></span><span>lily_george@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span class="_j0r"></span><span>lily_george@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100002073660100" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger3"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="koko.jpeg" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100002073660100" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger3"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300headtas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="koko.jpeg" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Neilly Tan</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 22" data-utime="1503438961.201">Aug 22</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Neilly Tan</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 22" data-utime="1503438961.201">Aug 22</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>neilly_tan@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>neilly_tan@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:1848166849" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger4"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="jabba.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:1848166849" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger4"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="jabba.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Aarthi Anbalagan</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503372367.687">Aug 21</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Aarthi Anbalagan</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503372367.687">Aug 21</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>aarthi@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>aarthi@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100001763040106" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger5" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="raar.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100001763040106" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger5" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="raar.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Dominique Moore</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503323685.651">Aug 21</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Dominique Moore</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503323685.651">Aug 21</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>dominique_moore@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>dominique_moore@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100000086188898" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger6" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="corgibutt.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100000086188898" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger6" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="corgibutt.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Edward Jiao</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503312073.84">Aug 21</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Edward Jiao</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 21" data-utime="1503312073.84">Aug 21</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>edward_jiao@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>edward_jiao@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_thread:1446191068797668" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger7" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://fcbk.su/_data/stickers/747761758674299/747761758674299_03.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_thread:1446191068797668" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger7" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://fcbk.su/_data/stickers/747761758674299/747761758674299_03.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Hannah Tipperman</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 20" data-utime="1503223470.375">Aug 20</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Hannah Tipperman</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 20" data-utime="1503223470.375">Aug 20</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">hannah_tipperman@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">hannah_tipperman@brown.edu</span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100010854223665" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger8" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="itsatrap.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100010854223665" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger8" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="itsatrap.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Isaac Semaya</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 20" data-utime="1503200619.537">Aug 20</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Isaac Semaya</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 20" data-utime="1503200619.537">Aug 20</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>isaac_semaya@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>isaac_semaya@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:1505378392" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger9" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://www.stickermotions.com/wp-content/uploads/2015/04/7326364384077058231.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:1505378392" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger9" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://www.stickermotions.com/wp-content/uploads/2015/04/7326364384077058231.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Kelly Wang</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 18" data-utime="1503059823.535">Aug 18</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Kelly Wang</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 18" data-utime="1503059823.535">Aug 18</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>kelly_wang@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>kelly_wang@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100004078659440" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger10" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="panda.jpg" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100004078659440" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger10" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="panda.jpg" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Marcus Yeo</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 13" data-utime="1502672586.675">Aug 13</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Marcus Yeo</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 13" data-utime="1502672586.675">Aug 13</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">marcus_yeo@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">marcus_yeo@brown.edu</span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100001000037666" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger11" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://s-media-cache-ak0.pinimg.com/236x/e8/80/f9/e880f9802e71b4679dc1b4772d36f0c9--brother-snoopy.jpg" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100001000037666" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger11" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://s-media-cache-ak0.pinimg.com/236x/e8/80/f9/e880f9802e71b4679dc1b4772d36f0c9--brother-snoopy.jpg" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Lucas Rosenblatt</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 13" data-utime="1502640588.111">Aug 13</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Lucas Rosenblatt</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 13" data-utime="1502640588.111">Aug 13</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>lucas_rosenblatt@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>lucas_rosenblatt@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100000698268252" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger12" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://123emoji.com/wp-content/uploads/2016/04/314.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100000698268252" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger12" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://123emoji.com/wp-content/uploads/2016/04/314.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Martha Edwards</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 10" data-utime="1502018556.035">Aug 10</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Martha Edwards</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 10" data-utime="1502018556.035">Aug 10</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">martha_edwards@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>martha_edwards@brown.edu</span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:1640547484" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger13" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://scontent-sea1-1.cdninstagram.com/t51.2285-15/e35/13584314_469847123208784_1664645980_n.jpg?ig_cache_key=MTI4ODA2MjgzMjE0NzY5OTExMA%3D%3D.2" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:1640547484" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" id="trigger13" tabindex="-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://scontent-sea1-1.cdninstagram.com/t51.2285-15/e35/13584314_469847123208784_1664645980_n.jpg?ig_cache_key=MTI4ODA2MjgzMjE0NzY5OTExMA%3D%3D.2" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Oliver Hu</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 10" data-utime="1502394522.302">Aug 10</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Oliver Hu</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 10" data-utime="1502394522.302">Aug 10</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">oliver_hu@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">oliver_hu@brown.edu</span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:1254900877" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger14"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="sleeping.jpg" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:1254900877" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger14"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="sleeping.jpg" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Tiffany Chen</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 8" data-utime="1502239598.527">Aug 8</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Tiffany Chen</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 8" data-utime="1502239598.527">Aug 8</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>tiffany_chen@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>tiffany_chen@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100002669989167" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger15" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://fcbk.su/_data/stickers/523658474454511/523658474454511_40.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100002669989167" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger15" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="http://fcbk.su/_data/stickers/523658474454511/523658474454511_40.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Rachel Teller</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 6" data-utime="1502040222.979">Aug 6</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Rachel Teller</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 6" data-utime="1502040222.979">Aug 6</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>rachel_teller@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>rachel_teller@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:1011330976" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger16" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://68.media.tumblr.com/c14347c42f9fe1ad45b51853ba394fc3/tumblr_inline_mpp8c6CCaL1qz4rgp.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:1011330976" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger16" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://68.media.tumblr.com/c14347c42f9fe1ad45b51853ba394fc3/tumblr_inline_mpp8c6CCaL1qz4rgp.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">William Lee</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 4" data-utime="1501895613.062">Aug 4</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">William Lee</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 4" data-utime="1501895613.062">Aug 4</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">william_lee@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">william_lee@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100006818319610" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger17"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://s-media-cache-ak0.pinimg.com/originals/6b/00/01/6b00016e56de02c1dd2627b8a78ed1ff.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100006818319610" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger17"href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="https://s-media-cache-ak0.pinimg.com/originals/6b/00/01/6b00016e56de02c1dd2627b8a78ed1ff.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Yuta Arai</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 2" data-utime="1501673596.895">Aug 2</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Yuta Arai</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 2" data-utime="1501673596.895">Aug 2</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf">yuta_arai@brown.edu</span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf">yuta_arai@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                                <li class="_5l-3 _1ht1" role="row" tabindex="-1">
-                                                   <div class="_5l-3 _1ht5" id="row_header_id_user:100001327122088" role="gridcell" tabindex="-1">
-                                                      <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger18" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
-                                                            
-                                                         <div aria-hidden="true" class="_1qt3 _5l-3">
-                                                            <div class="_4ldz" style="height: 50px; width: 50px;">
-                                                               <div class="_4ld-" style="height: 50px; width: 50px;">
-                                                                  <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="shaun.png" width="50" height="50" alt="" class="img"></div>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                   <li class="_5l-3 _1ht1" role="row" tabindex="-1">
+                                                      <div class="_5l-3 _1ht5" id="row_header_id_user:100001327122088" role="gridcell" tabindex="-1">
+                                                         <a class="_1ht5 _2il3 _5l-3" role="link" tabindex="-1" id="trigger18" href="https://mail.google.com/mail/?view=cm&fs=1&to=cs1300tas@lists.brown.edu">
+
+                                                            <div aria-hidden="true" class="_1qt3 _5l-3">
+                                                               <div class="_4ldz" style="height: 50px; width: 50px;">
+                                                                  <div class="_4ld-" style="height: 50px; width: 50px;">
+                                                                     <div class="_55lt" size="50" style="width: 50px; height: 50px;"><img src="shaun.png" width="50" height="50" alt="" class="img"></div>
+                                                                  </div>
                                                                </div>
                                                             </div>
-                                                         </div>
-                                                         <div class="_1qt4 _5l-m">
-                                                            <div class="_1qt5 _5l-3">
-                                                               <span class="_1ht6">Shaun Wallace</span>
-                                                               <div><abbr class="_1ht7 timestamp" title="August 2" data-utime="1501648978.201">Aug 2</abbr></div>
+                                                            <div class="_1qt4 _5l-m">
+                                                               <div class="_1qt5 _5l-3">
+                                                                  <span class="_1ht6">Shaun Wallace</span>
+                                                                  <div><abbr class="_1ht7 timestamp" title="August 2" data-utime="1501648978.201">Aug 2</abbr></div>
+                                                               </div>
+                                                               <div class="_1qt5 _5l-3"><span class="_1htf"><span>shaun_wallace@brown.edu</span></span></div>
                                                             </div>
-                                                            <div class="_1qt5 _5l-3"><span class="_1htf"><span>shaun_wallace@brown.edu</span></span></div>
-                                                         </div>
-                                                      </a>
-                                                   </div>
-                                                </li>
-                                             </ul>
+                                                         </a>
+                                                      </div>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                             <div class="_19hf"><a tabindex="-1" href="#">I love my TAs!</a></div>
                                           </div>
-                                          <div class="_19hf"><a tabindex="-1" href="#">I love my TAs!</a></div>
                                        </div>
                                     </div>
                                  </div>
+                                 <div class="uiScrollableAreaTrack hidden_elem" style="opacity: 0;">
+                                    <div class="uiScrollableAreaGripper" style="height: 174.122px; top: 0px;"></div>
+                                 </div>
                               </div>
-                              <div class="uiScrollableAreaTrack hidden_elem" style="opacity: 0;">
-                                 <div class="uiScrollableAreaGripper" style="height: 174.122px; top: 0px;"></div>
-                              </div>
+                              <div class="_4u-f"><iframe aria-hidden="true" class="_1_xb" tabindex="-1"></iframe></div>
                            </div>
-                           <div class="_4u-f"><iframe aria-hidden="true" class="_1_xb" tabindex="-1"></iframe></div>
                         </div>
                      </div>
                   </div>
                </div>
-               <div aria-labelledby="js_2 js_5" class="_1q5-" role="main">
+               <div id="main" aria-labelledby="js_2 js_5" class="_1q5-" role="main">
                   <span class="_mh6 _wsc" id="cch_f291f0f5cfcd7c">
-                     <div class="_5742" style="text-align: left;">
+                     <div class="_5742" style="text-align: center;">
                         <div class="_5743" style="width: auto; margin-left: auto;">
-                           <h2 class="_17w2" style="font-size: 30;" id="js_5"><span class="_3oh-">CS 1300 / 0130 &nbsp;&nbsp; <span style="font-size: 30; margin-top:0px; opacity: .4;">User Interfaces and User Experience</span></span></h2>
+                           <h2 class="_17w2" style="font-size: 30;" id="js_5">
+                              <span id="course_title" class="_3oh-">CS 1300 / 0130 &nbsp;&nbsp; <span style="font-size: 30; margin-top:0px; opacity: .4; font-weight: 200;">User Interfaces and User Experience</span></span>
+                              <span id="course_title_mobile" style="display: none;">
+                                 CS 1300 / 130 - UI / UX 
+                              </span>
+                           </h2>
                            
                         </div>
-                        <ul class="_fl2">
+                        <ul id="top_icons" class="_fl2">
                            <li></li>
                            <li>
                               <a class="_30yy" target="_blank" href="https://www.youtube.com/watch?v=fWNaR-rxAic">
@@ -969,6 +1015,7 @@ function animate(elem, style, unit, from, to, time, prop) {
                               </a>
                            </li>
                            <li>
+                              <a class="_30yy" target="_blank" href="https://www.youtube.com/watch?v=XaBNrDAxOJY">
                                  <div style="height: 32px; width: 32px;">
                                     <svg viewBox="0 0 64 64">
                                        <g>
@@ -984,7 +1031,7 @@ function animate(elem, style, unit, from, to, time, prop) {
                         </ul>
                      </div>
                      <div class="_20bp">
-                        <div class=" _4_j5" style="width: 200px;">
+                        <div id="right_side_bar" class=" _4_j5">
                            <div class="_4u-c _4_j9 _9hq" style="">
                               <div class="_5f0v uiScrollableArea fade" style="">
                                  <div class="uiScrollableAreaWrap scrollable" id="js_9">
@@ -1498,7 +1545,7 @@ tbody:hover > tr:hover td {
 
             <h2 id="visitors">UX Visitors</h2>
             <table>
-                  <thead>
+                  <thread>
                         <tr>
                               <td>Date</td>
                               <td>Visitor</td>
@@ -1794,7 +1841,7 @@ tbody:hover > tr:hover td {
             <p>If you sign up for a lab and can't attend, please let us know at least 12 hours ahead of time -- otherwise, you'll lose priority for lab signups, and will have to sign up after everyone else. See the late policy for more details.</p>
 
             <h2 id="latepolicy">Late Policy</h2>
-          <p>You may use two late passes only toward assignments throughout the semester that will allow you to turn in an assignment up to 1 week late with no penalty. You cannot stack late passes, and they are applied automatically. If you use up both late passes, assignments may still be turned in late but with 5 points deducted per week. Being late to labs may yield in no credit, and you must notify the TAs at least 12 hours prior if you cannot attend a lab. Late reading comments are not accepted. <a href="https://canvas.brown.edu/files/61116989/download?download_frd=1">See the full policy here for more details.</a></p>
+            <p>You may use two late passes only toward assignments throughout the semester that will allow you to turn in an assignment up to 1 week late with no penalty. You cannot stack late passes, and they are applied automatically. If you use up both late passes, assignments may still be turned in late but with 5 points deducted per week. Being late to labs may yield in no credit, and you must notify the TAs at least 12 hours prior if you cannot attend a lab. Late reading comments are not accepted. <a href="https://canvas.brown.edu/files/61116989/download?download_frd=1">See the full policy here for more details.</a></p>
 
             <h2>Collaboration Policy</h2>
             <p>The Collaboration Policy explains the policies around working with other students or using outside-class resources for your assignment. It can be <a href="https://canvas.brown.edu/courses/1073924/assignments/7673571">viewed in Canvas</a> and is marked as an assignment worth 0 points. Your work will not be graded until you have agreed to the collaboration policy by submitting that assignment.</p>
@@ -1806,10 +1853,10 @@ tbody:hover > tr:hover td {
             <p>This course may involve assignments where you must work in groups of more than one. You may designate groups on your own, but you also have the option to get assigned to groups by filling out a form. Should you ever encounter issues with particular group members, please do not hesitate to email the HTA list. An example of an issue might be one or more member(s) who have not responded to any form of communication for over 3 days. If in doubt, email us anyway - we are here to help!</p>
 
             <h2 id="software">Software Licenses</h2>
-          <p>Thanks to the generous help of various companies, we have obtained free licenses for a number of design software programs. <a href="https://canvas.brown.edu/files/61087421/download?download_frd=1">You can find the full guide on how to get access to our design software licenses here.</a> <strong>Do not share this document with students outside of class, or you will be in violation of the collaboration policy.</strong></p>
+             <p>Thanks to the generous help of various companies, we have obtained free licenses for a number of design software programs. <a href="https://canvas.brown.edu/files/61087421/download?download_frd=1">You can find the full guide on how to get access to our design software licenses here.</a> <strong>Do not share this document with students outside of class, or you will be in violation of the collaboration policy.</strong></p>
 
             <h2 id="resources">Additional Resources &amp; Help</h2>
-          <p>You can find a comprehensive list of resources for emergencies, student and employee accessibility services (SEAS), counseling and psychological services (CAPS), mental health and wellness, academic support, and more <a href="https://cs.brown.edu/about/diversity/resources/">here on the CS Diversity and Inclusion site</a>. If you need additional support, please email the HTAs or Jeff.</p>
+            <p>You can find a comprehensive list of resources for emergencies, student and employee accessibility services (SEAS), counseling and psychological services (CAPS), mental health and wellness, academic support, and more <a href="https://cs.brown.edu/about/diversity/resources/">here on the CS Diversity and Inclusion site</a>. If you need additional support, please email the HTAs or Jeff.</p>
 
             <h2 id="feedback">Anonymous Feedback Form</h2>
             <p>If you have any comments, questions, or concerns that you would like to anonymously note about the class (assignments, TAs, HTAs, Jeff, labs, lectures, anything!), feel free to drop us a message in this <a href="https://goo.gl/forms/MUGebRq46Fd7yrUm1">anonymous feedback form</a>. We monitor it regularly and will try to address any issues within a week.</p>
@@ -1824,9 +1871,9 @@ tbody:hover > tr:hover td {
                                     </div>
                                  </div>
                               </div>
-                        </div>
+                        <div>
                               <div class="_4u-f"><iframe aria-hidden="true" class="_1_xb" tabindex="-1"></iframe></div>
-                           </div>
+                           
                            
                               <div style="bottom: 0px; left: 0px; overflow: hidden; position: absolute; right: 0px; top: 0px; visibility: hidden; z-index: -1;">
                                  <div style="left: 0px; position: absolute; top: 0px; transition: 0s; width: 10000px; height: 10000px;"></div>
@@ -1835,7 +1882,9 @@ tbody:hover > tr:hover td {
                                  <div style="height: 200%; left: 0px; position: absolute; top: 0px; transition: 0s; width: 200%;"></div>
                               </div>
                            </div>
+                     
                      </div>
+                  
                   </span>
                </div>
             </div>
